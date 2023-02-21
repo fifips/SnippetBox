@@ -1,0 +1,24 @@
+{{define "title"}}Account View{{end}}
+{{define "main"}}
+    <h2>Account View</h2>
+    {{with .User}}
+        <table>
+            <tr>
+                <td><b>Name</b></td>
+                <td>{{.Name}}</td>
+            </tr>
+            <tr>
+                <td><b>Email</b></td>
+                <td>{{.Email}}</td>
+            </tr>
+            <tr>
+                <td><b>Joined</b></td>
+                <td>{{humanDate .Created}}</td>
+            </tr>
+            <tr>
+                <td><b>Password</b></td>
+                <td><a href='/account/password/update'>Change Password</a></td>
+            </tr>
+        </table>
+    {{end}}
+{{end}}
